@@ -1,0 +1,9 @@
+- name: playbook
+  hosts: aws
+  become: yes
+  become_user: root
+  tasks:
+    - name: installing httpd
+      yum:
+        name: httpd
+        state: latest
